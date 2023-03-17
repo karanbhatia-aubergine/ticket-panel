@@ -11,12 +11,14 @@ const post =  async(req, res) => {
         if (email !== '' && email.match(emailFormat)) { return email; }
         return f
     };
+
     if(req.path == "/signup"){
         access = "normal user"
     }else if (req.path == "/admin/signup"){
         access = "admin"
     }
-    console.log(req.path)
+    
+    // console.log(req.path)
     // console.log(access)
     try {
         const email = isEmail(req.body.email);

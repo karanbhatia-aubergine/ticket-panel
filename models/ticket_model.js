@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+
 const ticket_schema = new mongoose.Schema({
         ticket :{
             required : true,
@@ -49,10 +50,15 @@ const ticket_schema = new mongoose.Schema({
             data : Buffer,
             type:String
         },
+        assign:{
+            required:true,
+            type:String
+        },
         status :{
             required:false,
             type:String
         }
 });
+
 const Ticket_Data = mongoose.model('tickets',ticket_schema)
 module.exports = Ticket_Data

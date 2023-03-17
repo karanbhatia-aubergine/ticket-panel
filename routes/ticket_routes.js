@@ -32,7 +32,8 @@ const ticket_method = async(req,res)=>{
                     type: type,
                     Priority:Priority,
                     status:req.body.status,
-                    description:description
+                    description:description,
+                    assign:"Not Assign Currently"
                 }
             
         );
