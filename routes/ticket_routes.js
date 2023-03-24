@@ -19,6 +19,7 @@ const ticket_method = async(req,res)=>{
         username = req.body.username,
         Priority = req.body.Priority,
         description = req.body.description
+        machine_type = req.body.machine_type
 
         const data = new Ticket_Data({
                     ticket:ticket,
@@ -33,7 +34,8 @@ const ticket_method = async(req,res)=>{
                     Priority:Priority,
                     status:req.body.status,
                     description:description,
-                    assign:"Not Assign Currently"
+                    assign:"Not Assign Currently",
+                    machine_type:machine_type
                 }
             
         );

@@ -9,6 +9,10 @@ const ticket_schema = new mongoose.Schema({
             required:true,
             type : Date
         },
+        assest_id:{
+            required:false,
+            type:String
+        },
         userid:{
             required:true,
             type:String
@@ -33,8 +37,12 @@ const ticket_schema = new mongoose.Schema({
             required:true,
             type:String
         },
+        machine_type:{
+            required:false,
+            type:String
+        },
         type:{
-            required:true,
+            required:false,
             type:String
         },
         Priority:{
